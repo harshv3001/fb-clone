@@ -1,0 +1,48 @@
+.createStory {
+  width: 120px;
+  height: 200px;
+  box-shadow: 0px 5px 17px -7px rgba(0, 0, 0, 0.75);
+  border-radius: 10px;
+  margin-right: 10px;
+  transition: transform 100ms ease-in;
+  cursor: pointer;
+  position: relative;
+
+  &:hover {
+    transform: scale(1.07);
+  }
+
+  .createStory__img {
+    width: 100%;
+    height: 70%;
+    object-fit: fill;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+  }
+
+  .createStory__bottom {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+
+    .addIcon__outer {
+      position: absolute;
+      bottom: -22px;
+      background-color: #f1f2f5;
+      border-radius: 100%;
+      padding: 2px;
+
+      .addStory__icon {
+        color: #2e81f4;
+        font-size: xx-large;
+      }
+    }
+    .addStory__title {
+      position: absolute;
+      top: 23px;
+      font-size: 16px;
+      font-weight: 500;
+    }
+  }
+}

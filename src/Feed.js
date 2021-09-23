@@ -21,19 +21,17 @@ function Feed() {
   return (
     <div className="feed">
       <StoryReel />
-      <div>
-        <MessageSender />
-        {posts.map((post) => (
-          <Post
-            key={post.id}
-            image={post.data.image}
-            message={post.data.message}
-            timestamp={post.data.timestamp}
-            username={post.data.username}
-            profilePic={post.data.profilePic}
-          />
-        ))}
-      </div>
+      <MessageSender />
+      {posts.map((post) => (
+        <Post
+          key={post.id}
+          image={post.data.image}
+          message={post.data.message}
+          timestamp={post.data.timestamp}
+          username={post.data.username}
+          profilePic={post.data.profilePic}
+        />
+      ))}
     </div>
   );
 }

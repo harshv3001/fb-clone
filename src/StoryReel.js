@@ -1,10 +1,15 @@
 import React from "react";
+import CreateStory from "./CreateStory";
+import { useStateValue } from "./StateProvider";
 import Story from "./Story";
 import "./StoryReel.scss";
 
 function StoryReel() {
+  const [{ user }] = useStateValue();
+
   return (
     <div className="storyReal">
+      <CreateStory profileSrc={user.photoURL} />
       <Story
         image="https://i.pinimg.com/736x/85/8e/00/858e00ea90f77bd6f41c9759a23c53d8.jpg"
         title="Mitt Parmar"
@@ -25,11 +30,11 @@ function StoryReel() {
         title="Vishesh Bhatt"
         profileSrc="https://png.pngtree.com/png-clipart/20190924/original/pngtree-user-vector-avatar-png-image_4830521.jpg"
       />
-      <Story
+      {/* <Story
         image="https://i.pinimg.com/originals/16/b9/28/16b9282370f627d4e02dd8e89f938f07.jpg"
         title="Richa Patel"
         profileSrc="https://st3.depositphotos.com/1037987/15097/i/600/depositphotos_150975580-stock-photo-portrait-of-businesswoman-in-office.jpg"
-      />
+      /> */}
     </div>
   );
 }

@@ -52,15 +52,15 @@ function MessageSender() {
       <div className="messageSender__bottom">
         <div className="messageSender__option">
           <VideocamIcon style={{ color: "red" }} />
-          <h3>Live Video</h3>
+          <span className="option__text">Live Video</span>
         </div>
         <div className="messageSender__option">
           <PhotoLibraryIcon style={{ color: "green" }} />
-          <h3>Photo/Video</h3>
+          <span className="option__text">Photo/Video</span>
         </div>
         <div className="messageSender__option">
           <InsertEmoticonIcon style={{ color: "orange" }} />
-          <h3>Feeling/Activity</h3>
+          <span className="option__text">Feeling/Activity</span>
         </div>
       </div>
     </div>
