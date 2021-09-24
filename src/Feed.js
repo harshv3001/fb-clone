@@ -17,7 +17,7 @@ function Feed() {
         );
       });
   }, []);
-  console.log("posts", posts);
+
   return (
     <div className="feed">
       <StoryReel />

@@ -1,13 +1,19 @@
 import { Avatar } from "@mui/material";
-import React from "react";
+import React, { useState } from "react";
 import "./Post.scss";
-import ThumbUpIcon from "@mui/icons-material/ThumbUp";
+
 import ChatBubbleOutlineIcon from "@mui/icons-material/ChatBubbleOutline";
-import NearMeIcon from "@mui/icons-material/NearMe";
-import AccountCircleIcon from "@mui/icons-material/AccountCircle";
-import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
+import ThumbUpAltOutlinedIcon from "@mui/icons-material/ThumbUpAltOutlined";
+import NearMeOutlinedIcon from "@mui/icons-material/NearMeOutlined";
+import ThumbUpIcon from "@mui/icons-material/ThumbUp";
 
 function Post({ profilePic, image, username, timestamp, message }) {
+  const [isLiked, setIsLiked] = useState(false);
+
+  const handleLike = () => {
+    setIsLiked((prev) => !prev);
+  };
+
   return (
     <div className="post">
       <div className="post__top">
@@ -24,22 +30,27 @@ function Post({ profilePic, image, username, timestamp, message }) {
         <img src={image} alt="" />
       </div>
       <div className="post__options">
-        <div className="post__option">
-          <ThumbUpIcon />
-          <p>Like</p>
+        <div className="post__option" onClick={handleLike}>
+          {isLiked ? (
+            <ThumbUpIcon className="icon__liked" />
+          ) : (
+            <ThumbUpAltOutlinedIcon />
+          )}
+
+          <p>{isLiked ? "Liked" : "Like"}</p>
         </div>
         <div className="post__option">
           <ChatBubbleOutlineIcon />
           <p>Comment</p>
         </div>
         <div className="post__option">
-          <NearMeIcon />
+          <NearMeOutlinedIcon />
           <p>Share</p>
         </div>
-        <div className="post__option">
+        {/* <div className="post__option">
           <AccountCircleIcon />
           <ExpandMoreIcon />
-        </div>
+        </div> */}
       </div>
     </div>
   );

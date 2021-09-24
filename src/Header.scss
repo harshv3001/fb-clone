@@ -1,5 +1,5 @@
 .header {
-  padding: 15px 20px;
+  padding: 10px 16px;
   display: flex;
   justify-content: space-between;
   position: sticky;
@@ -18,7 +18,7 @@
     align-items: center;
 
     > img {
-      height: 50px;
+      height: 45px;
     }
 
     .header__input {
@@ -32,6 +32,11 @@
         max-width: 180px;
       }
 
+      .search__icon {
+        color: gray;
+        width: 24px;
+        height: 24px;
+      }
       > input {
         border: none;
         background-color: transparent;
@@ -61,10 +66,29 @@
       @media (max-width: 1045px) {
         display: none;
       }
-
-      > h4 {
-        margin-left: 10px;
+      .header__avatar {
+        width: 30px;
+        height: 30px;
       }
+      > h4 {
+        margin: 0 10px;
+        font-weight: 500;
+      }
+    }
+    .MuiIconButton-root {
+      color: black;
+    }
+    .header_right__icon {
+      font-size: 22px;
+    }
+    .icon__round {
+      background-color: #e4e6eb;
+      border-radius: 100%;
+      height: 40px;
+      width: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
   }
 }
@@ -81,6 +105,7 @@
   display: flex;
   align-items: center;
   padding: 0 30px;
+  margin: 0 10px;
   cursor: pointer;
 
   @media (max-width: 898px) {

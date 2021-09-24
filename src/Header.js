@@ -1,5 +1,6 @@
 import React from "react";
 import "./Header.scss";
+
 import SearchIcon from "@mui/icons-material/Search";
 import HomeIcon from "@mui/icons-material/Home";
 import FlagIcon from "@mui/icons-material/Flag";
@@ -7,11 +8,12 @@ import SubscriptionsIcon from "@mui/icons-material/Subscriptions";
 import StorefrontIcon from "@mui/icons-material/Storefront";
 import SupervisedUserCircleIcon from "@mui/icons-material/SupervisedUserCircle";
 import { Avatar, IconButton } from "@mui/material";
-import AddIcon from "@mui/icons-material/Add";
-import ForumIcon from "@mui/icons-material/Forum";
-import NotificationsActiveIcon from "@mui/icons-material/NotificationsActive";
-import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import MenuIcon from "@mui/icons-material/Menu";
+import AppsRoundedIcon from "@mui/icons-material/AppsRounded";
+import NotificationsRoundedIcon from "@mui/icons-material/NotificationsRounded";
+import ArrowDropDownRoundedIcon from "@mui/icons-material/ArrowDropDownRounded";
+import ChatRoundedIcon from "@mui/icons-material/ChatRounded";
+
 import { useStateValue } from "./StateProvider";
 
 function Header() {
@@ -25,8 +27,8 @@ function Header() {
             alt="fb"
           />
           <div className="header__input">
-            <SearchIcon />
-            <input placeholder="Search facebook" type="text" />
+            <SearchIcon className="search__icon" />
+            <input placeholder="Search Facebook" type="text" />
           </div>
         </div>
         <div className="menu__icon">
@@ -51,20 +53,28 @@ function Header() {
         </div>
         <div className="header__right">
           <div className="header__info">
-            <Avatar src={user.photoURL} />
+            <Avatar src={user.photoURL} className="header__avatar" />
             <h4>{user.displayName}</h4>
           </div>
           <IconButton>
-            <AddIcon />
+            <div className="icon__round">
+              <AppsRoundedIcon />
+            </div>
           </IconButton>
           <IconButton>
-            <ForumIcon />
+            <div className="icon__round">
+              <ChatRoundedIcon className="header_right__icon" />
+            </div>
           </IconButton>
           <IconButton>
-            <NotificationsActiveIcon />
+            <div className="icon__round">
+              <NotificationsRoundedIcon className="header_right__icon" />
+            </div>
           </IconButton>
           <IconButton>
-            <ExpandMoreIcon />
+            <div className="icon__round">
+              <ArrowDropDownRoundedIcon />
+            </div>
           </IconButton>
         </div>
       </div>

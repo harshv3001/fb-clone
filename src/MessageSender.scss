@@ -38,14 +38,14 @@
 
   .messageSender__bottom {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
+    padding: 15px;
 
     .messageSender__option {
-      padding: 20px;
       display: flex;
       align-items: center;
       color: gray;
-      margin: 5px;
+      margin: 0 9px;
 
       .option__text {
         font-size: 18px;
